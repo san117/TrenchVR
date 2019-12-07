@@ -158,8 +158,7 @@ GameObject:
   - component: {fileID: 465851284227762734}
   - component: {fileID: 442339645722978178}
   - component: {fileID: 442339645722978179}
-  - component: {fileID: 4627285858696264803}
-  - component: {fileID: 8466967318865496065}
+  - component: {fileID: 7438508068692157814}
   m_Layer: 0
   m_Name: Luger
   m_TagString: Untagged
@@ -272,7 +271,7 @@ MonoBehaviour:
   magazine_slot: {fileID: 442306262129083885}
   slapper_magazine: {fileID: 443322096433659451}
   slapper_receiver: {fileID: 443322097541534021}
---- !u!65 &4627285858696264803
+--- !u!65 &7438508068692157814
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -283,21 +282,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.05677901, y: 0.19772473, z: 0.19059676}
-  m_Center: {x: -0.0029781833, y: -0.005302904, z: 0.019927742}
---- !u!65 &8466967318865496065
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 442339645722978176}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.05677901, y: 0.05528219, z: 0.34534606}
-  m_Center: {x: -0.0029781836, y: 0.06591838, z: 0.09730241}
+  m_Size: {x: 0.056779005, y: 0.19772473, z: 0.34534606}
+  m_Center: {x: -0.0029781824, y: -0.005302906, z: 0.09730239}
 --- !u!1 &442803419093414260
 GameObject:
   m_ObjectHideFlags: 0
