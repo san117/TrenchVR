@@ -1,7 +1,6 @@
 ﻿using OVRTouchSample;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 namespace VRWeaponary
 {
@@ -10,11 +9,15 @@ namespace VRWeaponary
     {
         [Header("VR Active Button")]
         public OVRInput.Button active_button = OVRInput.Button.PrimaryHandTrigger;
+        public bool isInteractive;
 
         public Weapon AttachedWeapon { get; private set; }
         public bool IsSelected { get; private set; }
 
         private Hand insideHand;
+
+        //Events
+        public Action<Hand> onHandEnter;
 
         private void Start()
         {
@@ -59,6 +62,8 @@ namespace VRWeaponary
         public void OverHand(Hand hand)
         {
             HanldeLocalInputs(hand);
+
+            onHandEnter?.Invoke(hand);
         }
 
         /// <summary>

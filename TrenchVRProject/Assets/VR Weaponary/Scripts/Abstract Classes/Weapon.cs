@@ -8,7 +8,7 @@ namespace VRWeaponary
     [RequireComponent(typeof(Rigidbody))]
     public abstract class Weapon : MonoBehaviour
     {
-        [SerializeField] private Transform trackingSpace;
+        public Transform trackingSpace;
         private Rigidbody m_rigidbody;
         private WeaponPart[] parts;
         private Hand[] hands;
@@ -57,12 +57,12 @@ namespace VRWeaponary
         {
             UpdateParts();
 
-            if (Vector3.Distance(transform.position, Camera.main.transform.position) > 35)
-            {
-                DisctivePhysics();
-                transform.position = originPos;
-                transform.rotation = originRot;
-            }
+            //if (Vector3.Distance(transform.position, Camera.main.transform.position) > 35)
+            //{
+            //    DisctivePhysics();
+            //    transform.position = originPos;
+            //    transform.rotation = originRot;
+            //}
         }
 
         private void UpdateParts()
@@ -74,37 +74,40 @@ namespace VRWeaponary
 
             foreach (var part in parts)
             {
-                foreach (var hand in hands)
+                if (part.isInteractive)
                 {
-                    float distance = Vector3.Distance(part.transform.position, hand.transform.position);
-
-                    if (distance <= interactiveDistance)
+                    foreach (var hand in hands)
                     {
-                        if (closestsParts.TryGetValue(hand, out WeaponPart p))
+                        float distance = Vector3.Distance(part.transform.position, hand.transform.position);
+
+                        if (distance <= interactiveDistance)
                         {
-                            if (Vector3.Distance(part.transform.position, hand.transform.position) > distance)
+                            if (closestsParts.TryGetValue(hand, out WeaponPart p))
                             {
-                                p.Unselect();
-                                closestsParts[hand] = part;
+                                if (Vector3.Distance(part.transform.position, hand.transform.position) > distance)
+                                {
+                                    p.Unselect();
+                                    closestsParts[hand] = part;
+                                    part.Select(hand);
+                                }
+                            }
+                            else
+                            {
+                                closestsParts.Add(hand, part);
                                 part.Select(hand);
                             }
                         }
-                        else
-                        {
-                            closestsParts.Add(hand, part);
-                            part.Select(hand);
-                        }
-                    }
 
-                    if (closestsParts.TryGetValue(hand, out var cachePart))
-                    {
-                        if (Vector3.Distance(hand.transform.position, cachePart.transform.position) > interactiveDistance)
+                        if (closestsParts.TryGetValue(hand, out var cachePart))
                         {
-                            closestsParts.Remove(hand);
-
-                            if (!closestsParts.ContainsValue(cachePart))
+                            if (Vector3.Distance(hand.transform.position, cachePart.transform.position) > interactiveDistance)
                             {
-                                cachePart.Unselect();
+                                closestsParts.Remove(hand);
+
+                                if (!closestsParts.ContainsValue(cachePart))
+                                {
+                                    cachePart.Unselect();
+                                }
                             }
                         }
                     }
