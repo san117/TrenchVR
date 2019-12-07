@@ -57,12 +57,12 @@ namespace VRWeaponary
         {
             UpdateParts();
 
-            //if (Vector3.Distance(transform.position, Camera.main.transform.position) > 35)
-            //{
-            //    DisctivePhysics();
-            //    transform.position = originPos;
-            //    transform.rotation = originRot;
-            //}
+            if (Vector3.Distance(transform.position, Camera.main.transform.position) > 35)
+            {
+                DisctivePhysics();
+                transform.position = originPos;
+                transform.rotation = originRot;
+            }
         }
 
         private void UpdateParts()
