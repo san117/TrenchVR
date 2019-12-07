@@ -6,6 +6,7 @@ namespace WeaponSystem
 {
     public class GrabPoint : WeaponPart
     {
+        
         public GameObject hand_pose;
 
         public Hand currentGrabHand;

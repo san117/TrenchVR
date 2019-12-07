@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace VRWeaponary
 {
-    public abstract class StaticWeapon : ShootableWeapon
+    public abstract class StaticWeapon : SimpleWeapon
     {
 
     }

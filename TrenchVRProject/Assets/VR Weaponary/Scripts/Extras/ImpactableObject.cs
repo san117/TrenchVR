@@ -1,17 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
-using VRWeaponary;
 
-namespace EnemySystem
+namespace VRWeaponary
 {
     [RequireComponent(typeof(Collider), typeof(Rigidbody))]
-    public class BodyPart : MonoBehaviour, IShootable
+    public class ImpactableObject : MonoBehaviour, IShootable
     {
         public LayerMask collidableObjects;
-
-        public Enemy enemy;
 
         public ParticleSystem impact_particle;
         [HideInInspector] public Collider m_collider;
@@ -23,13 +19,12 @@ namespace EnemySystem
             m_collider = GetComponent<Collider>();
         }
 
-        public void Hit(RaycastHit hitinfo, Bullet bullet)
+        public virtual void Hit(RaycastHit hitinfo, Bullet bullet)
         {
             GameObject particle = Instantiate(impact_particle.gameObject, hitinfo.point, Quaternion.identity);
 
             particle.transform.LookAt(transform.position + hitinfo.normal);
-
-            enemy.Damage(bullet.damage * damageMultiply, this, hitinfo, bullet.Mass * bullet.Velocity * bullet.impactForce);
         }
     }
+
 }

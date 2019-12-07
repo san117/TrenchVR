@@ -4,8 +4,8 @@ using UnityEngine;
 
 namespace VRWeaponary
 {
-    public abstract class ShootableWeapon : Weapon
+    public interface IShootable
     {
-
+        void Hit(RaycastHit hit, Bullet bullet);
     }
 }

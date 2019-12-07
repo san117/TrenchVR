@@ -2,9 +2,11 @@
 using UnityEngine.Events;
 using System.Collections;
 
-public class TestHand : MonoBehaviour
+public class HandEmulator : MonoBehaviour
 {
     SkinnedMeshRenderer ren;
+
+    public KeyCode keycode = KeyCode.None;
 
     public UnityEvent onPressed;
 
@@ -14,9 +16,11 @@ public class TestHand : MonoBehaviour
         ren.enabled = true;
     }
 
-    [ContextMenu("Test")]
-    public void Test()
+    private void Update()
     {
-        onPressed.Invoke();
+        if (Input.GetKeyDown(keycode))
+        {
+            onPressed.Invoke();
+        }
     }
 }

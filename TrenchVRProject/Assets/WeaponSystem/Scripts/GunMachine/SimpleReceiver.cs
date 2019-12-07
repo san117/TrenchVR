@@ -37,7 +37,7 @@ namespace WeaponSystem
                 maxReach = true;
                 minReach = false;
 
-                onMaxReach.Invoke();
+                onMaxReach?.Invoke();
             }
         }
 
@@ -48,7 +48,7 @@ namespace WeaponSystem
                 maxReach = false;
                 minReach = true;
 
-                onMinReach.Invoke();
+                onMinReach?.Invoke();
             }
         }
 
