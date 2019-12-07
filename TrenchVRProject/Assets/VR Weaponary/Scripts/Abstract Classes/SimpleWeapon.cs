@@ -10,7 +10,7 @@ namespace VRWeaponary
         public int maxAmmo = 10;
 
         [Header("Parts")]
-        public Receiver receiver;
+        
         public Trigger trigger;
         public Cannon cannon;
 
@@ -28,18 +28,17 @@ namespace VRWeaponary
             base.OnInitWeapon();
 
             trigger.OnTrigger += Shoot;
-            receiver.onMaxReach += Reload;
         }
 
         public void Shoot()
         {
             if (ammo > 0)
             {
+                ammo--;
+
                 cannon.Shoot();
 
                 onShoot?.Invoke();
-
-                ammo--;
 
                 if (ammo == 0)
                 {

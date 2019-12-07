@@ -4,9 +4,11 @@ using UnityEngine;
 
 namespace VRWeaponary
 {
-    public class Carabine : SimpleWeapon
+    public class Karabiner98k : SimpleWeapon
     {
-        [Header("Carabine")]
+        [Header("Karabiner98k Parameters")]
+        public Receiver receiver;
+
         public Rigidbody drop_bullet_prefab;
         public Transform drop_bullet_point;
 
@@ -17,6 +19,7 @@ namespace VRWeaponary
             base.OnInitWeapon();
 
             onShoot += DropBullet;
+            receiver.onMaxReach += Reload;
         }
 
         private void DropBullet()

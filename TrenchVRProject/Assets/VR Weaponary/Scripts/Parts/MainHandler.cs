@@ -9,7 +9,6 @@ namespace VRWeaponary
     {
         [Header("Main Handler Parameters")]
         public SlaveHandler secondary_handler;
-        private Vector3 rOffset;
 
         public override void UpdatePart()
         {
@@ -25,7 +24,14 @@ namespace VRWeaponary
                 else
                 {
                     AttachedWeapon.transform.position = CurrentGrabHand.transform.position + posOffset;
-                    AttachedWeapon.transform.LookAt(secondary_handler.CurrentGrabHand.transform.position);
+
+                    var rotation = Quaternion.LookRotation(secondary_handler.CurrentGrabHand.transform.position - AttachedWeapon.transform.position);
+
+                    AttachedWeapon.transform.rotation = rotation;
+
+                    AttachedWeapon.transform.LookAt(secondary_handler.CurrentGrabHand.transform.position, CurrentGrabHand.transform.up);
+
+                    AttachedWeapon.transform.Rotate(rOffset,Space.Self);
                 }
             }
         }

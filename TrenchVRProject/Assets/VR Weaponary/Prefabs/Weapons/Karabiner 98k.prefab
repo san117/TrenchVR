@@ -112,6 +112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   active_button: 16384
+  isInteractive: 1
   hand_pose: {fileID: 5382146365822972125}
   maxPoint: {fileID: 5382146366474190747}
   minPoint: {fileID: 5382146365819039272}
@@ -210,7 +211,7 @@ GameObject:
   - component: {fileID: 1793730916305713734}
   - component: {fileID: 1793730916305713736}
   m_Layer: 0
-  m_Name: Carabine
+  m_Name: Karabiner 98k
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -223,7 +224,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1793730916305713735}
-  m_LocalRotation: {x: -0, y: -0.70710576, z: -0, w: 0.70710784}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 6.324, y: 0.891, z: -5.418}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -309,15 +310,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trackingSpace: {fileID: 0}
-  ammo: 10
-  maxAmmo: 10
-  receiver: {fileID: 1793076838779219436}
+  ammo: 5
+  maxAmmo: 5
   trigger: {fileID: 5382146366057234883}
   cannon: {fileID: 5382146367545723406}
   shoot_audio: {fileID: 8300000, guid: 5b0af3dc50b4f504dad5b03ec85481fa, type: 3}
   reload_audio: {fileID: 8300000, guid: 3c8f7296ae53a784db413f98bf0c6da1, type: 3}
   run_out_ammo_audio: {fileID: 8300000, guid: 7a1ad32dc3dee5c4aa00a05b88c6c362, type: 3}
   no_ammo_audio: {fileID: 8300000, guid: c3da9dbeec952c546820628f10706ef8, type: 3}
+  receiver: {fileID: 1793076838779219436}
   drop_bullet_prefab: {fileID: 5382146366640147877}
   drop_bullet_point: {fileID: 5382146365816987149}
 --- !u!64 &1793730916305713736
@@ -2122,7 +2123,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: b209aedea4329ec44a4958581fc7b597, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2173,6 +2174,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   active_button: 16384
+  isInteractive: 1
   hand_pose: {fileID: 5297943244319795321}
   posOffset: {x: 0, y: 0, z: 0}
   rotationOffset: {x: 0, y: 0, z: 90}
@@ -2190,6 +2192,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   active_button: 16384
+  isInteractive: 0
   grabPoint: {fileID: 5382146366057234882}
   trigger_threshold: 0.4
   untrigger_threshold: 0.1
@@ -2447,7 +2450,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: b209aedea4329ec44a4958581fc7b597, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2488,6 +2491,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   active_button: 16384
+  isInteractive: 1
   hand_pose: {fileID: 5382146365800519472}
   rotationOffset: {x: 0, y: 0, z: -90}
   posOffset: {x: 0.4, y: 0, z: 0}
@@ -3655,7 +3659,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5382146367545723404}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.007, y: 0.034, z: 0.812}
+  m_LocalPosition: {x: -0.01, y: 0.0487, z: 0.8205}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5382146365779312299}
@@ -3693,6 +3697,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   active_button: 0
+  isInteractive: 0
   bullet: {fileID: 6837814349369980085, guid: 51d215b1034fef9438f8cd7f922ed3d3, type: 3}
   shoot_particle: {fileID: 5382146365759907703}
 --- !u!1001 &5382146365778824051
