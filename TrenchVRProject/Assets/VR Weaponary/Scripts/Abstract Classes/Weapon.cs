@@ -55,6 +55,7 @@ namespace VRWeaponary
 
         private void Update()
         {
+            UpdateWeapon();
             UpdateParts();
 
             if (Vector3.Distance(transform.position, Camera.main.transform.position) > 35)
@@ -64,6 +65,8 @@ namespace VRWeaponary
                 transform.rotation = originRot;
             }
         }
+
+        protected virtual void UpdateWeapon() { }
 
         private void UpdateParts()
         {

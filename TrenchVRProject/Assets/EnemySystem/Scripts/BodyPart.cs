@@ -16,6 +16,8 @@ namespace EnemySystem
         public ParticleSystem impact_particle;
         [HideInInspector] public Collider m_collider;
 
+        public AudioClip clip;
+
         public float damageMultiply = 1;
 
         private void Start()
@@ -30,6 +32,8 @@ namespace EnemySystem
             particle.transform.LookAt(transform.position + hitinfo.normal);
 
             enemy.Damage(bullet.damage * damageMultiply, this, hitinfo, bullet.Mass * bullet.Velocity * bullet.impactForce);
+
+            AudioSource.PlayClipAtPoint(clip, Camera.main.transform.position);
         }
     }
 }

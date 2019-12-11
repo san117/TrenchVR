@@ -172,6 +172,63 @@ namespace EnemySystem
             if (last != null)
                 last.isOccupied = false;
 
+            StartCoroutine(WaitToStay());
+        }
+        
+        private IEnumerator WaitToStay()
+        {
+            var rigidbodies = transform.GetComponentsInChildren<Rigidbody>();
+
+            float average = 0;
+
+            int maxSeconds = 30;
+            int currentSeconds = 0;
+
+            while (true)
+            {
+                yield return new WaitForSeconds(2);
+
+                foreach (var rb in rigidbodies)
+                {
+                    average += rb.velocity.magnitude;
+                }
+
+                average /= rigidbodies.Length;
+
+                if (average < 1f || currentSeconds >= maxSeconds)
+                {
+                    RemoveComponents();
+                    break;
+                }
+
+                currentSeconds += 2;
+            }
+        }
+
+        private void RemoveComponents()
+        {
+            foreach (var bodypart in transform.GetComponentsInChildren<BodyPart>())
+            {
+                Destroy(bodypart);
+            }
+
+            foreach (var joint in transform.GetComponentsInChildren<CharacterJoint>())
+            {
+                Destroy(joint);
+            }
+
+            foreach (var rigidbody in transform.GetComponentsInChildren<Rigidbody>())
+            {
+                Destroy(rigidbody);
+            }
+
+            foreach (var coll in transform.GetComponentsInChildren<Collider>())
+            {
+                Destroy(coll);
+            }
+
+            StopAllCoroutines();
+
             this.enabled = false;
         }
 

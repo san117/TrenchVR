@@ -13,6 +13,12 @@ namespace EnemySystem
 
         private void OnDrawGizmos()
         {
+            if (neighbors.Count == 0)
+            {
+                Gizmos.color = Color.yellow;
+                Gizmos.DrawCube(transform.position + Vector3.up * 2, Vector3.one / 2);
+            }
+
             foreach (var neighbor in neighbors)
             {
                 Gizmos.color = Color.green;

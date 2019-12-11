@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 427069238}
   - component: {fileID: 427069237}
   - component: {fileID: 427069236}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -132,7 +132,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 738592514}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Front
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -162,7 +162,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1093575035}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -192,7 +192,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1645461080}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Middle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -799,7 +799,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: -1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 33.94749, y: 0.14477468, z: 0.1436249}
+  m_ConnectedAnchor: {x: 33.947487, y: 0.1447745, z: 0.14394557}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: -1, z: 0}
   m_TwistLimitSpring:
@@ -851,6 +851,7 @@ MonoBehaviour:
   enemy: {fileID: 7649486689326507656}
   impact_particle: {fileID: 19808544, guid: 78e1c8c5b281b8b439229473779ac9aa, type: 3}
   m_collider: {fileID: 0}
+  clip: {fileID: 8300000, guid: 37aa1f0cbb154dc41b65bd8c988a3352, type: 3}
   damageMultiply: 1
 --- !u!1 &7650597697910420282
 GameObject:
@@ -1269,7 +1270,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -27.114552, y: 0.000010974705, z: -0.038157687}
+  m_ConnectedAnchor: {x: -27.114565, y: -0.0000056577846, z: -0.03798244}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
@@ -1321,6 +1322,7 @@ MonoBehaviour:
   enemy: {fileID: 7649486689326507656}
   impact_particle: {fileID: 19808544, guid: 78e1c8c5b281b8b439229473779ac9aa, type: 3}
   m_collider: {fileID: 633310717}
+  clip: {fileID: 8300000, guid: 37aa1f0cbb154dc41b65bd8c988a3352, type: 3}
   damageMultiply: 1
 --- !u!1 &7650776148320429190
 GameObject:
@@ -1399,7 +1401,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -40.920807, y: 5.3295255, z: -19.098953}
+  m_ConnectedAnchor: {x: -40.920784, y: 5.3296695, z: -19.098948}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: 1}
   m_TwistLimitSpring:
@@ -1451,6 +1453,7 @@ MonoBehaviour:
   enemy: {fileID: 7649486689326507656}
   impact_particle: {fileID: 19808544, guid: 78e1c8c5b281b8b439229473779ac9aa, type: 3}
   m_collider: {fileID: 1325309929}
+  clip: {fileID: 8300000, guid: 37aa1f0cbb154dc41b65bd8c988a3352, type: 3}
   damageMultiply: 1
 --- !u!1 &7650780021657895180
 GameObject:
@@ -1497,6 +1500,7 @@ GameObject:
   - component: {fileID: 813302517}
   - component: {fileID: 813302519}
   - component: {fileID: 813302518}
+  - component: {fileID: 3679340011608733427}
   m_Layer: 0
   m_Name: Spine_01
   m_TagString: Untagged
@@ -1559,7 +1563,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -10.39326, y: 0.000008583069, z: -0.00000023841858}
+  m_ConnectedAnchor: {x: -10.393231, y: 0.00029468536, z: -0.00000059604645}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: -1, z: 0}
   m_TwistLimitSpring:
@@ -1593,6 +1597,26 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &3679340011608733427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7650780245966394554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 728fa6ef26b58404ebe410e9d84c6560, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collidableObjects:
+    serializedVersion: 2
+    m_Bits: 1024
+  enemy: {fileID: 7649486689326507656}
+  impact_particle: {fileID: 19808544, guid: 78e1c8c5b281b8b439229473779ac9aa, type: 3}
+  m_collider: {fileID: 920685350}
+  clip: {fileID: 8300000, guid: 37aa1f0cbb154dc41b65bd8c988a3352, type: 3}
+  damageMultiply: 2
 --- !u!1 &7650782513931668188
 GameObject:
   m_ObjectHideFlags: 0
@@ -1931,7 +1955,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: -1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 39.930927, y: -0.000027656555, z: 0.000010967255}
+  m_ConnectedAnchor: {x: 39.930927, y: -0.000024318695, z: -0.00006246567}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
@@ -1983,6 +2007,7 @@ MonoBehaviour:
   enemy: {fileID: 7649486689326507656}
   impact_particle: {fileID: 19808544, guid: 78e1c8c5b281b8b439229473779ac9aa, type: 3}
   m_collider: {fileID: 0}
+  clip: {fileID: 8300000, guid: 37aa1f0cbb154dc41b65bd8c988a3352, type: 3}
   damageMultiply: 1
 --- !u!1 &7650875945526139302
 GameObject:
@@ -2103,7 +2128,10 @@ GameObject:
   - component: {fileID: 7649253978101704328}
   - component: {fileID: 7664296189568506760}
   - component: {fileID: 7672811713954798266}
-  m_Layer: 0
+  - component: {fileID: 2225287919704183872}
+  - component: {fileID: 1105379018731855506}
+  - component: {fileID: 1144294089728961015}
+  m_Layer: 17
   m_Name: SM_Char_Attach_American_Helmet_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2169,6 +2197,57 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!136 &2225287919704183872
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7650887455053786552}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.12
+  m_Height: 0.36339858
+  m_Direction: 2
+  m_Center: {x: -0.000002592802, y: 0.15, z: 0.027610864}
+--- !u!54 &1105379018731855506
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7650887455053786552}
+  serializedVersion: 2
+  m_Mass: 3.4
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &1144294089728961015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7650887455053786552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 728fa6ef26b58404ebe410e9d84c6560, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collidableObjects:
+    serializedVersion: 2
+    m_Bits: 1024
+  enemy: {fileID: 7649486689326507656}
+  impact_particle: {fileID: 206207355993548197, guid: 484044a0d31eb3d43a6b5cf73c0ece35,
+    type: 3}
+  m_collider: {fileID: 920685350}
+  clip: {fileID: 8300000, guid: 261b1c4dcf097754f91ed15fe6243c1f, type: 3}
+  damageMultiply: 0
 --- !u!1 &7650888739541047896
 GameObject:
   m_ObjectHideFlags: 0
@@ -2276,7 +2355,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: -1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -40.92052, y: 5.329502, z: 19.098904}
+  m_ConnectedAnchor: {x: -40.920498, y: 5.3296413, z: 19.098856}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: -1}
   m_TwistLimitSpring:
@@ -2328,6 +2407,7 @@ MonoBehaviour:
   enemy: {fileID: 7649486689326507656}
   impact_particle: {fileID: 19808544, guid: 78e1c8c5b281b8b439229473779ac9aa, type: 3}
   m_collider: {fileID: 0}
+  clip: {fileID: 8300000, guid: 37aa1f0cbb154dc41b65bd8c988a3352, type: 3}
   damageMultiply: 1
 --- !u!1 &7650919043282399370
 GameObject:
@@ -2436,7 +2516,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -33.94743, y: -0.14489698, z: -0.14363563}
+  m_ConnectedAnchor: {x: -33.94743, y: -0.14490962, z: -0.14398086}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
@@ -2488,6 +2568,7 @@ MonoBehaviour:
   enemy: {fileID: 7649486689326507656}
   impact_particle: {fileID: 19808544, guid: 78e1c8c5b281b8b439229473779ac9aa, type: 3}
   m_collider: {fileID: 920685350}
+  clip: {fileID: 8300000, guid: 37aa1f0cbb154dc41b65bd8c988a3352, type: 3}
   damageMultiply: 1
 --- !u!1 &7650947820608997934
 GameObject:
@@ -2607,6 +2688,7 @@ GameObject:
   - component: {fileID: 7649197983253217774}
   - component: {fileID: 701182792}
   - component: {fileID: 701182793}
+  - component: {fileID: 4114041013374737564}
   m_Layer: 0
   m_Name: Hips
   m_TagString: Untagged
@@ -2664,6 +2746,26 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 14.50904, y: 27.836922, z: 38.197857}
   m_Center: {x: -3.13874, y: 0.100774765, z: 0.000024795532}
+--- !u!114 &4114041013374737564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7650993849453951878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 728fa6ef26b58404ebe410e9d84c6560, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collidableObjects:
+    serializedVersion: 2
+    m_Bits: 1024
+  enemy: {fileID: 7649486689326507656}
+  impact_particle: {fileID: 19808544, guid: 78e1c8c5b281b8b439229473779ac9aa, type: 3}
+  m_collider: {fileID: 920685350}
+  clip: {fileID: 8300000, guid: 37aa1f0cbb154dc41b65bd8c988a3352, type: 3}
+  damageMultiply: 1.5
 --- !u!1 &7650995863172541498
 GameObject:
   m_ObjectHideFlags: 0
@@ -2802,7 +2904,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 4.1157722, y: -2.6920817, z: -9.896709}
+  m_ConnectedAnchor: {x: 4.115765, y: -2.6921263, z: -9.896661}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: -1}
   m_TwistLimitSpring:
@@ -2854,6 +2956,7 @@ MonoBehaviour:
   enemy: {fileID: 7649486689326507656}
   impact_particle: {fileID: 19808544, guid: 78e1c8c5b281b8b439229473779ac9aa, type: 3}
   m_collider: {fileID: 0}
+  clip: {fileID: 8300000, guid: 37aa1f0cbb154dc41b65bd8c988a3352, type: 3}
   damageMultiply: 1
 --- !u!1 &7651030316725523390
 GameObject:
@@ -3367,7 +3470,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: -1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -39.93092, y: -0.000014781952, z: -0.000012397766}
+  m_ConnectedAnchor: {x: -39.930923, y: 0.00003194809, z: 0.00005722046}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: -1, z: 0}
   m_TwistLimitSpring:
@@ -3419,6 +3522,7 @@ MonoBehaviour:
   enemy: {fileID: 7649486689326507656}
   impact_particle: {fileID: 19808544, guid: 78e1c8c5b281b8b439229473779ac9aa, type: 3}
   m_collider: {fileID: 0}
+  clip: {fileID: 8300000, guid: 37aa1f0cbb154dc41b65bd8c988a3352, type: 3}
   damageMultiply: 1
 --- !u!1 &7651226600787301458
 GameObject:
@@ -3811,7 +3915,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -58.987263, y: 1.8647938, z: 0.000000059604467}
+  m_ConnectedAnchor: {x: -58.98726, y: 1.8645325, z: 0.00000017881376}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: 1}
   m_TwistLimitSpring:
@@ -3863,7 +3967,8 @@ MonoBehaviour:
   enemy: {fileID: 7649486689326507656}
   impact_particle: {fileID: 19808544, guid: 78e1c8c5b281b8b439229473779ac9aa, type: 3}
   m_collider: {fileID: 0}
-  damageMultiply: 1.5
+  clip: {fileID: 8300000, guid: 706ee7afe78966344b877b0d26a35b2d, type: 3}
+  damageMultiply: 3.5
 --- !u!1 &7651283261214377412
 GameObject:
   m_ObjectHideFlags: 0
@@ -4185,7 +4290,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 4.1157794, y: -2.6920855, z: 9.896709}
+  m_ConnectedAnchor: {x: 4.115764, y: -2.692134, z: 9.896754}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: 1}
   m_TwistLimitSpring:
@@ -4237,6 +4342,7 @@ MonoBehaviour:
   enemy: {fileID: 7649486689326507656}
   impact_particle: {fileID: 19808544, guid: 78e1c8c5b281b8b439229473779ac9aa, type: 3}
   m_collider: {fileID: 0}
+  clip: {fileID: 8300000, guid: 37aa1f0cbb154dc41b65bd8c988a3352, type: 3}
   damageMultiply: 1
 --- !u!1 &7651443086499625210
 GameObject:
@@ -4317,7 +4423,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: -1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 27.114521, y: -0.000028567389, z: 0.038139954}
+  m_ConnectedAnchor: {x: 27.11452, y: -0.00001146365, z: 0.037935466}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
@@ -4369,6 +4475,7 @@ MonoBehaviour:
   enemy: {fileID: 7649486689326507656}
   impact_particle: {fileID: 19808544, guid: 78e1c8c5b281b8b439229473779ac9aa, type: 3}
   m_collider: {fileID: 0}
+  clip: {fileID: 8300000, guid: 37aa1f0cbb154dc41b65bd8c988a3352, type: 3}
   damageMultiply: 1
 --- !u!1 &7651453663966165310
 GameObject:
@@ -4411,6 +4518,10 @@ PrefabInstance:
     - target: {fileID: 1103511012436976, guid: cc13ea7aca755ee4bb10925b6bf586c8, type: 3}
       propertyPath: m_Name
       value: SM_Wep_American_Rifle_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1103511012436976, guid: cc13ea7aca755ee4bb10925b6bf586c8, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4525899957293392, guid: cc13ea7aca755ee4bb10925b6bf586c8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4467,6 +4578,30 @@ PrefabInstance:
     - target: {fileID: 4525899957293392, guid: cc13ea7aca755ee4bb10925b6bf586c8, type: 3}
       propertyPath: m_LocalScale.z
       value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1107845022839168, guid: cc13ea7aca755ee4bb10925b6bf586c8, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1102873402324750, guid: cc13ea7aca755ee4bb10925b6bf586c8, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1183476459094064, guid: cc13ea7aca755ee4bb10925b6bf586c8, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1781310753466742, guid: cc13ea7aca755ee4bb10925b6bf586c8, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1916250766182434, guid: cc13ea7aca755ee4bb10925b6bf586c8, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1913040878521872, guid: cc13ea7aca755ee4bb10925b6bf586c8, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc13ea7aca755ee4bb10925b6bf586c8, type: 3}

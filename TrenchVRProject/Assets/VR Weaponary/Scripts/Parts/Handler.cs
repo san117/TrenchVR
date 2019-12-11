@@ -46,7 +46,7 @@ namespace VRWeaponary
         {
             if (CurrentGrabHand != null)
             {
-                AttachedWeapon.ActivePhysics(CurrentGrabHand, 2, 2);
+                AttachedWeapon.ActivePhysics(CurrentGrabHand, 1, 1);
 
                 hand_pose.SetActive(false);
                 CurrentGrabHand.GetComponentInChildren<SkinnedMeshRenderer>().enabled = true;

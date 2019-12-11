@@ -16,9 +16,12 @@ namespace VRWeaponary
 
         private void EnterHand(Hand hand)
         {
-            if (hand.velocity.magnitude >= threshold)
+            if (gameObject.activeSelf)
             {
-                onSlap?.Invoke();
+                if (hand.velocity.magnitude >= threshold)
+                {
+                    onSlap?.Invoke();
+                }
             }
         }
     }
