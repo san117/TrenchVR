@@ -66,8 +66,6 @@ namespace VRWeaponary
             }
         }
 
-        protected virtual void UpdateWeapon() { }
-
         private void UpdateParts()
         {
             foreach (var pair in closestsParts)
@@ -81,13 +79,13 @@ namespace VRWeaponary
                 {
                     foreach (var hand in hands)
                     {
-                        float distance = Vector3.Distance(part.transform.position, hand.transform.position);
+                        float distance = part.DistanceToHand(hand);
 
                         if (distance <= interactiveDistance)
                         {
                             if (closestsParts.TryGetValue(hand, out WeaponPart p))
                             {
-                                if (Vector3.Distance(part.transform.position, hand.transform.position) > distance)
+                                if (part.DistanceToHand(hand) > distance)
                                 {
                                     p.Unselect();
                                     closestsParts[hand] = part;
@@ -103,7 +101,7 @@ namespace VRWeaponary
 
                         if (closestsParts.TryGetValue(hand, out var cachePart))
                         {
-                            if (Vector3.Distance(hand.transform.position, cachePart.transform.position) > interactiveDistance)
+                            if (cachePart.DistanceToHand(hand) > interactiveDistance)
                             {
                                 closestsParts.Remove(hand);
 
@@ -125,5 +123,10 @@ namespace VRWeaponary
         /// Called after start.
         /// </summary>
         protected virtual void OnInitWeapon() { }
+
+        /// <summary>
+        /// Called each frame.
+        /// </summary>
+        protected virtual void UpdateWeapon() { }
     }
 }

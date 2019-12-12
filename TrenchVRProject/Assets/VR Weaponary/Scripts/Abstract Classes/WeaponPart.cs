@@ -46,6 +46,11 @@ namespace VRWeaponary
             }
         }
 
+        public virtual float DistanceToHand(Hand hand)
+        {
+            return Vector3.Distance(transform.position, hand.transform.position);
+        }
+
         public virtual void HandleGlobalInputs() { }
 
         /// <summary>
