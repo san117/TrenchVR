@@ -7,11 +7,14 @@ namespace VRWeaponary
     public class Rocket : MonoBehaviour
     {
 
-        public Vector3 Velocity { get; private set; }
+        [Header("Rocket Properties")]
+        public float force;
+        public float damage;
+
         public LayerMask canImpactWith;
         RaycastHit hitPoint;
 
-        public float force = 2.5f;
+        public Vector3 Velocity;
 
         private Vector3 lastpos;
             
@@ -59,7 +62,7 @@ namespace VRWeaponary
                 Rigidbody rb = hit.GetComponent<Rigidbody>();
 
                 if (rb != null)
-                    rb.AddExplosionForce(2, transform.position, 3, 1.0F);
+                    rb.AddExplosionForce(force, transform.position, 3, 1.0F);
             }
 
             Destroy(this.gameObject);
