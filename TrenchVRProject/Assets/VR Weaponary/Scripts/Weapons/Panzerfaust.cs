@@ -61,8 +61,8 @@ namespace VRWeaponary
             {
                 if (!(grabPoint.CurrentGrabHand != null || trigger.grabPoint.CurrentGrabHand != null))
                 {
-                    Destroy(grabPoint);
-                    Destroy(trigger);
+                    Destroy(grabPoint.gameObject);
+                    Destroy(trigger.gameObject);
                 }
             }
         }

@@ -8,8 +8,9 @@ namespace VRWeaponary
     {
 
         [Header("Rocket Properties")]
-        public float force;
-        public float damage;
+        public float force = 10;
+        public float damage = 200;
+        public float radius = 3;
 
         public LayerMask canImpactWith;
         RaycastHit hitPoint;
@@ -48,21 +49,25 @@ namespace VRWeaponary
 
         private void Hit()
         {
-            if (hitPoint.collider != null)
-            {
-                Explode();
-            }
+            Explode();
         }
 
         private void Explode()
         {
-            Collider[] colls = Physics.OverlapSphere(transform.position, 3);
+            Collider[] colls = Physics.OverlapSphere(transform.position, radius);
             foreach (Collider hit in colls)
             {
                 Rigidbody rb = hit.GetComponent<Rigidbody>();
-
+                IShootable shootable = hit.GetComponent<IShootable>();
                 if (rb != null)
-                    rb.AddExplosionForce(force, transform.position, 3, 1.0F);
+                {
+                    rb.AddExplosionForce(force, transform.position, radius, 1.0F);
+
+                    if (shootable != null)
+                    {
+                        //TODO add damage
+                    }
+                }
             }
 
             Destroy(this.gameObject);
@@ -77,6 +82,7 @@ namespace VRWeaponary
 
         ///<summary>
         ///Similar a bullet. Explota al impactar
+        ///adds force to objects in a sphere
         ///</summary>
     }
 }

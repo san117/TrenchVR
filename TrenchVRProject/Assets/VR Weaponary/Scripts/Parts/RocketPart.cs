@@ -12,7 +12,7 @@ namespace VRWeaponary
 
         public void Shoot()
         {
-            rocket.enabled = true;
+            rocket.gameObject.SetActive(true);
             Destroy(gameObject);
         }
     }
