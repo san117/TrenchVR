@@ -5,22 +5,22 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Main Menu/MainMenu.unity
     guid: 206a18482de7308459212749c4895f79
   - enabled: 0
-    path: Assets/Scenes/Karabiner 98k/Karabiner 98k.unity
-    guid: 8c59ee901a8a5c4429d88d57ad867c37
-  - enabled: 0
-    path: Assets/Scenes/MG42 Heavy Machine/MG42 Heavy Machine.unity
-    guid: e83f4501b6176044c899a6b7481602a7
-  - enabled: 0
-    path: Assets/Scenes/Luger/Luger.unity
-    guid: 744f8c5411b02d6478386b620e62486c
-  - enabled: 0
     path: Assets/Scenes/Granade/Granade.unity
     guid: 9073cf1a0991f6042b5ac92726bbb519
-  - enabled: 0
+  - enabled: 1
+    path: Assets/Scenes/Karabiner 98k/Karabiner 98k.unity
+    guid: 8c59ee901a8a5c4429d88d57ad867c37
+  - enabled: 1
+    path: Assets/Scenes/Luger/Luger.unity
+    guid: 744f8c5411b02d6478386b620e62486c
+  - enabled: 1
+    path: Assets/Scenes/MG42 Heavy Machine/MG42 Heavy Machine.unity
+    guid: e83f4501b6176044c899a6b7481602a7
+  - enabled: 1
     path: Assets/Scenes/Normandy.unity
     guid: d93bdc525751a7f42b3c01883f87e766
   m_configObjects: {}
